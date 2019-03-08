@@ -59,7 +59,7 @@
 
 <body>
     
-    <p>Let's play a game. You press ← and → as randomly as you can, and I will try to guess your next input. Use your keyboard or the buttons below</p>
+    <p>Let's play a game. You press ← and → as randomly as you can, and I will try to guess your next input. Use your keyboard or the buttons below (on touchscreen devices)</p>
 
     <p>Every time I guess right, I will take $1 from your virtual account. Every time I guess wrong, you'll get $1.05. If you are as random as you think, you'll be making virtual dough in no time. Don't worry, there is no cheating involved. I keep track of the patterns you produce and use them to predict your next move.</p>
     <p>Once you've become tired of watching your virtual money evaporate, press the "randomize" button below, and I will add 10 pseudo-random inputs on your behalf. On average (i.e. not all the time), this is going to earn you some money. Isn't it ironic that a pseudo-random number generator is more "random" than you are?</p>
@@ -67,8 +67,8 @@
 	
 	<div style="text-align: center;"> 
 		<button id="randomize" onClick="randomHelpFunc(event)">randomize!</button>
-    	<button id="left" onClick="captureBtnLeftFunc(event)">&nbsp;&nbsp;←&nbsp;&nbsp;</button>
-    	<button id="right" onClick="captureBtnRightFunc(event)">&nbsp;&nbsp;→&nbsp;&nbsp;</button>
+    	<button id="left" ontouchstart="captureBtnLeftFunc(event)">&nbsp;&nbsp;←&nbsp;&nbsp;</button>
+    	<button id="right" ontouchstart="captureBtnRightFunc(event)">&nbsp;&nbsp;→&nbsp;&nbsp;</button>
     </div>
 
 	<div class='centreContainer'><div id="log">
@@ -124,7 +124,7 @@
 			{ displayModeBar: false });
     
     	// prevent page springing and double-tap zoom
-    	document.ontouchmove = function(event){ event.preventDefault(); }
+    	//document.ontouchmove = function(event){ event.preventDefault(); }
     
     	// capture keyboard key
         captureKeyFunc = function(evt) {
