@@ -218,7 +218,7 @@
 			iteration++; // increment iteration counter
 
 			// update the 5-gram history
-			gramHistory[historyIndex].counter0 += (1-lastKey)*(1-lastKey);
+			gramHistory[historyIndex].counter0 += (1 - lastKey);
 			gramHistory[historyIndex].counter1  += lastKey;
 		
 			// update the 5-gram buffer
